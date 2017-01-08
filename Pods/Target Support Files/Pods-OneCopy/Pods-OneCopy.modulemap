@@ -1,0 +1,6 @@
+framework module Pods_OneCopy {
+  umbrella header "Pods-OneCopy-umbrella.h"
+
+  export *
+  module * { export * }
+}

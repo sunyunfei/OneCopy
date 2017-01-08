@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="233" id="KGk-i7-Jjw" customClass="MusicSongInfoCell" customModule="OneCopy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="233"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="232"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="所属专辑:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9v-g2-G1k">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="Vdc-1c-jsc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="演唱者:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irc-JY-B0l">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="ysE-vu-K0w"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="作词:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7D0-K3-aNE">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="y8h-Lb-Hb3"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="作曲:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="094-k2-1PH">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="rH4-SO-CY1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="唱片公司:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAS-dv-b9l">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="QUo-Ap-Fob"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发行时间:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBi-8F-aKT">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="3x0-FJ-nF4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="专辑类别:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5SI-2y-LLr">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="Eoc-JZ-7Yu"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="（责任编辑：山山 sunshen@wufazhuce.com）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdf-5X-qQp">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Ja0-zD-sUM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="E9v-g2-G1k" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="2Xe-ME-4wc"/>
+                    <constraint firstAttribute="trailing" secondItem="bdf-5X-qQp" secondAttribute="trailing" constant="15" id="2Zl-KN-w6x"/>
+                    <constraint firstItem="tAS-dv-b9l" firstAttribute="top" secondItem="094-k2-1PH" secondAttribute="bottom" constant="8" id="4Td-yn-GG6"/>
+                    <constraint firstItem="irc-JY-B0l" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="9CD-Qh-ik7"/>
+                    <constraint firstAttribute="trailing" secondItem="7D0-K3-aNE" secondAttribute="trailing" constant="10" id="FbG-TV-rpQ"/>
+                    <constraint firstItem="5SI-2y-LLr" firstAttribute="top" secondItem="eBi-8F-aKT" secondAttribute="bottom" constant="8" id="J8M-h4-p7B"/>
+                    <constraint firstItem="bdf-5X-qQp" firstAttribute="top" secondItem="5SI-2y-LLr" secondAttribute="bottom" constant="8" id="KDG-KZ-sbS"/>
+                    <constraint firstAttribute="trailing" secondItem="irc-JY-B0l" secondAttribute="trailing" constant="10" id="NlW-2g-aCR"/>
+                    <constraint firstItem="094-k2-1PH" firstAttribute="top" secondItem="7D0-K3-aNE" secondAttribute="bottom" constant="8" id="Sre-2A-k4W"/>
+                    <constraint firstItem="irc-JY-B0l" firstAttribute="top" secondItem="E9v-g2-G1k" secondAttribute="bottom" constant="8" id="Ym3-2m-E73"/>
+                    <constraint firstItem="bdf-5X-qQp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="c2Z-Vq-Be1"/>
+                    <constraint firstItem="E9v-g2-G1k" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="c6q-6a-6Vl"/>
+                    <constraint firstItem="5SI-2y-LLr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="daX-5V-VjK"/>
+                    <constraint firstAttribute="trailing" secondItem="5SI-2y-LLr" secondAttribute="trailing" constant="10" id="g7b-x5-JuO"/>
+                    <constraint firstItem="eBi-8F-aKT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="huL-rq-SlT"/>
+                    <constraint firstItem="7D0-K3-aNE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="iO3-BP-Ilg"/>
+                    <constraint firstItem="094-k2-1PH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="jbV-Y3-9bv"/>
+                    <constraint firstAttribute="trailing" secondItem="tAS-dv-b9l" secondAttribute="trailing" constant="10" id="jwB-6S-UAf"/>
+                    <constraint firstItem="7D0-K3-aNE" firstAttribute="top" secondItem="irc-JY-B0l" secondAttribute="bottom" constant="8" id="lyx-hT-vSC"/>
+                    <constraint firstItem="tAS-dv-b9l" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="mdQ-QN-qfc"/>
+                    <constraint firstAttribute="trailing" secondItem="eBi-8F-aKT" secondAttribute="trailing" constant="10" id="q47-rJ-VA2"/>
+                    <constraint firstAttribute="trailing" secondItem="E9v-g2-G1k" secondAttribute="trailing" constant="10" id="vTw-AH-aGG"/>
+                    <constraint firstItem="eBi-8F-aKT" firstAttribute="top" secondItem="tAS-dv-b9l" secondAttribute="bottom" constant="8" id="xhY-qY-zaz"/>
+                    <constraint firstAttribute="trailing" secondItem="094-k2-1PH" secondAttribute="trailing" constant="10" id="zE2-HH-ISy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="changpiangongsi" destination="tAS-dv-b9l" id="Pdo-mf-4ih"/>
+                <outlet property="faxingshijian" destination="eBi-8F-aKT" id="igk-MA-Zq8"/>
+                <outlet property="suoshuzhuanji" destination="E9v-g2-G1k" id="Bx5-ON-LN1"/>
+                <outlet property="yanchangzhe" destination="irc-JY-B0l" id="4G5-se-Qjx"/>
+                <outlet property="zhuanjileibie" destination="5SI-2y-LLr" id="51y-iS-yrR"/>
+                <outlet property="zuoci" destination="7D0-K3-aNE" id="KUL-oh-k8I"/>
+                <outlet property="zuoqu" destination="094-k2-1PH" id="FAS-gQ-mcF"/>
+            </connections>
+            <point key="canvasLocation" x="-96" y="-94"/>
+        </tableViewCell>
+    </objects>
+</document>
