@@ -114,6 +114,11 @@
 		04EC35A51D9D0991008BCF65 /* Read.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EC35A41D9D0991008BCF65 /* Read.storyboard */; };
 		04EC35A71D9D0B3A008BCF65 /* Music.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EC35A61D9D0B3A008BCF65 /* Music.storyboard */; };
 		04EC35A91D9D0B7B008BCF65 /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EC35A81D9D0B7B008BCF65 /* Movie.storyboard */; };
+		058C527E1E23835700E54753 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C527D1E23835700E54753 /* LoginViewController.swift */; };
+		058C52801E23835E00E54753 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058C527F1E23835E00E54753 /* LoginStoryboard.storyboard */; };
+		058C52821E2385FC00E54753 /* MainViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C52811E2385FC00E54753 /* MainViewManager.swift */; };
+		058C52841E238BB400E54753 /* MusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C52831E238BB400E54753 /* MusicManager.swift */; };
+		058C53071E239A7C00E54753 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C53061E239A7C00E54753 /* UserManager.swift */; };
 		288950756BD0AAC9DFE94367 /* Pods_OneCopy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FB1EE3FB99400383208BD5 /* Pods_OneCopy.framework */; };
 /* End PBXBuildFile section */
 
@@ -274,6 +279,11 @@
 		04EC35A41D9D0991008BCF65 /* Read.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Read.storyboard; sourceTree = "<group>"; };
 		04EC35A61D9D0B3A008BCF65 /* Music.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Music.storyboard; sourceTree = "<group>"; };
 		04EC35A81D9D0B7B008BCF65 /* Movie.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Movie.storyboard; sourceTree = "<group>"; };
+		058C527D1E23835700E54753 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		058C527F1E23835E00E54753 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
+		058C52811E2385FC00E54753 /* MainViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewManager.swift; sourceTree = "<group>"; };
+		058C52831E238BB400E54753 /* MusicManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicManager.swift; sourceTree = "<group>"; };
+		058C53061E239A7C00E54753 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		4AA76E244854E8309BF5A677 /* Pods-OneCopy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneCopy.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneCopy/Pods-OneCopy.release.xcconfig"; sourceTree = "<group>"; };
 		C3FB1EE3FB99400383208BD5 /* Pods_OneCopy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneCopy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB2A83530538B523A54E7C1F /* Pods-OneCopy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneCopy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneCopy/Pods-OneCopy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -467,6 +477,9 @@
 			children = (
 				04413B7B1DA8BDFB00331860 /* Common.swift */,
 				04413B7D1DA8C18600331860 /* Tools.swift */,
+				058C52811E2385FC00E54753 /* MainViewManager.swift */,
+				058C52831E238BB400E54753 /* MusicManager.swift */,
+				058C53061E239A7C00E54753 /* UserManager.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -631,6 +644,7 @@
 		04EC359D1D9D083F008BCF65 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				058C527C1E2381AA00E54753 /* Login */,
 				04413B661DA882C200331860 /* Base */,
 				04EC35A11D9D088B008BCF65 /* Movie */,
 				04EC35A01D9D0879008BCF65 /* Music */,
@@ -674,6 +688,15 @@
 				040CE5511DAF78D200714C2E /* MovieVC.swift */,
 			);
 			path = Movie;
+			sourceTree = "<group>";
+		};
+		058C527C1E2381AA00E54753 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				058C527D1E23835700E54753 /* LoginViewController.swift */,
+				058C527F1E23835E00E54753 /* LoginStoryboard.storyboard */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		0CC8480A1134F3E63D663AE3 /* Frameworks */ = {
@@ -810,6 +833,7 @@
 				04EC35A31D9D08BC008BCF65 /* MainPage.storyboard in Resources */,
 				04EC35A91D9D0B7B008BCF65 /* Movie.storyboard in Resources */,
 				040CE5581DAF872D00714C2E /* MovieListCell.xib in Resources */,
+				058C52801E23835E00E54753 /* LoginStoryboard.storyboard in Resources */,
 				04EC35A71D9D0B3A008BCF65 /* Music.storyboard in Resources */,
 				04EC35731D9CFFC7008BCF65 /* LaunchScreen.storyboard in Resources */,
 				04EC35A51D9D0991008BCF65 /* Read.storyboard in Resources */,
@@ -893,6 +917,7 @@
 				04CCDE761DAF1F9F00269211 /* NJBannerImageView.m in Sources */,
 				040CE5521DAF78D200714C2E /* MovieVC.swift in Sources */,
 				040CE52B1DAF738A00714C2E /* BoolExtensions.swift in Sources */,
+				058C53071E239A7C00E54753 /* UserManager.swift in Sources */,
 				040CE5341DAF738A00714C2E /* NSAttributedStringExtensions.swift in Sources */,
 				040CE5361DAF738A00714C2E /* NSDateExtensions.swift in Sources */,
 				040CE5971DAF89D200714C2E /* MJRefreshConst.m in Sources */,
@@ -930,6 +955,8 @@
 				040CE59A1DAF89D200714C2E /* UIScrollView+MJRefresh.m in Sources */,
 				040CE5541DAF79A900714C2E /* MovieListModel.swift in Sources */,
 				040CE5481DAF738A00714C2E /* UISliderExtensions.swift in Sources */,
+				058C527E1E23835700E54753 /* LoginViewController.swift in Sources */,
+				058C52841E238BB400E54753 /* MusicManager.swift in Sources */,
 				040CE5371DAF738A00714C2E /* NSDictionaryExtensions.swift in Sources */,
 				040CE54F1DAF738A00714C2E /* UIViewExtensions.swift in Sources */,
 				040CE5921DAF89D200714C2E /* MJRefreshBackStateFooter.m in Sources */,
@@ -982,6 +1009,7 @@
 				040CE59B1DAF89D200714C2E /* UIView+MJExtension.m in Sources */,
 				040CE5261DAF738A00714C2E /* BlockPan.swift in Sources */,
 				04CCDE771DAF1F9F00269211 /* NJBannerView.m in Sources */,
+				058C52821E2385FC00E54753 /* MainViewManager.swift in Sources */,
 				040CE58B1DAF89D200714C2E /* MJRefreshFooter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

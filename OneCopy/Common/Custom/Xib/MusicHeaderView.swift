@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import AVFoundation
 protocol MusicHeaderViewDelegate {
     
     
@@ -24,6 +24,14 @@ protocol MusicHeaderViewDelegate {
 class MusicHeaderView: UIView {
  
     var delegate : MusicHeaderViewDelegate?
+    //音乐播放管理
+    lazy var player:AVPlayer = {
+    
+        let item = AVPlayerItem.init(url: URL.init(string: "http://yinyueshiting.baidu.com/data2/music/134375021/11757051483862461128.mp3?xcode=a726b83aa9e2d118350a5c038dd045b5")!)
+        let player = AVPlayer.init(playerItem: item)
+        print("play music")
+        return player
+    }()
     
     var typeIndex : Int = 0
     
@@ -51,6 +59,7 @@ class MusicHeaderView: UIView {
         self.headerImgView.layer.cornerRadius = 25
         self.headerImgView.layer.masksToBounds = true
         self.btn_1.isSelected = true
+        
     }
     
     @IBAction func songStoryBtnClick(_ sender: UIButton) {
@@ -82,6 +91,22 @@ class MusicHeaderView: UIView {
         
         self.typeIndex = 2
         self.delegate?.musicHeaderViewFuncBtnClick(view: self, index: 2)
+    }
+    
+    //点击播放音乐按钮
+    @IBAction func clickPlayBtn(_ sender: UIButton) {
+        
+        if !sender.isSelected {
+            
+            //开始播放
+            player.play()
+        }else{
+        
+            //停止播放
+            player.pause()
+        }
+        
+        sender.isSelected = !sender.isSelected
     }
 
 }
