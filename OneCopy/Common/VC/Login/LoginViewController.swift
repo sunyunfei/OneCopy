@@ -110,12 +110,21 @@ class LoginViewController: UIViewController {
     
     //点击注册按钮事件
     @IBAction func clickRegisterBtn(_ sender: UIButton) {
+        
+        HttpManager.registerForGet(account: userNameField.text!, password: userPasswordField.text!)
     }
     //点击登录按钮事件
     @IBAction func clickLoginBtn(_ sender: UIButton) {
         
-        let rootWindow:UIWindow = UIApplication.shared.keyWindow!
-        MainViewManager.createApp(rootWindow: rootWindow)
+        HttpManager.loginForGet(account: userNameField.text!, password: userPasswordField.text!,success: {(model) in
+        
+            print(model!)
+            //走到这说明登录成功了,把用户userId保存到本地
+            UserManager.saveUserIdForLocation(userName: model!.userName!)
+            //跳转界面
+            let rootWindow:UIWindow = UIApplication.shared.keyWindow!
+            MainViewManager.createApp(rootWindow: rootWindow)
+        });
     }
 
 }

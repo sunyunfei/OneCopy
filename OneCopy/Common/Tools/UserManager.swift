@@ -7,14 +7,14 @@
 //
 
 import UIKit
-let user_id:String = "user_id"
+let user_name:String = "user_name"
 class UserManager: NSObject {
 
     //存入用户的id
-    static func saveUserIdForLocation(userid:String){
+    static func saveUserIdForLocation(userName:String){
     
         let defaults = UserDefaults.standard
-        defaults.set(userid, forKey: user_id)
+        defaults.set(userName, forKey: user_name)
         defaults.synchronize()
     }
     
@@ -24,8 +24,8 @@ class UserManager: NSObject {
     
         let defaults = UserDefaults.standard
 //        var str: String = ""
-        let str:String? = defaults.object(forKey: user_id) as? String
-        if str == nil || str == "" || (str?.length)! < 5 {
+        let str:String? = defaults.object(forKey: user_name) as? String
+        if str == nil || str == "" || (str?.length)! < 1 {
             
             //没有登录
             return false
@@ -38,6 +38,6 @@ class UserManager: NSObject {
     static func obtainUserIdForLocation()->String?{
     
        let defaults = UserDefaults.standard
-       return (defaults.object(forKey: user_id) as! String?)!
+       return (defaults.object(forKey: user_name) as! String?)!
     }
 }

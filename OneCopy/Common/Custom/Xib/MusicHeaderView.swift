@@ -27,7 +27,7 @@ class MusicHeaderView: UIView {
     //音乐播放管理
     lazy var player:AVPlayer = {
     
-        let item = AVPlayerItem.init(url: URL.init(string: "http://yinyueshiting.baidu.com/data2/music/134375021/11757051483862461128.mp3?xcode=a726b83aa9e2d118350a5c038dd045b5")!)
+        let item = AVPlayerItem.init(url: URL.init(string: "http://sc1.111ttt.com/2016/1/12/10/205102159306.mp3")!)
         let player = AVPlayer.init(playerItem: item)
         print("play music")
         return player
