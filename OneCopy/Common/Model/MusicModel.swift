@@ -84,7 +84,7 @@ class MusicCommentModel: BaseModel {
             
             //算回复那条消息的高
             self.frameModel?.replyLblFrame = CGRect.init(x: replyInsidePadding, y: replyInsidePadding, w: APPWINDOWWIDTH - replyInsidePadding * 2 - replyOutsidePadding * 2, h: UIFont.systemFont(ofSize: replyNameFont).lineHeight)
-            
+            print(self.replyContent!)
             let r_titleSize = Tools.getTextRectSize(text: (self.replyContent)! as NSString, font: UIFont.systemFont(ofSize: replyContentFont), size: CGSize.init(width: (self.frameModel?.replyLblFrame?.width)!, height:CGFloat(MAXFLOAT)))
             //1.算大概有多少行
             let r_rowNum : CGFloat = r_titleSize.height / (UIFont.systemFont(ofSize: replyContentFont).lineHeight)
@@ -171,6 +171,8 @@ class MusicFrameModel: BaseModel {
 
 class MusicModel: BaseModel {
     
+    //id
+    var musicId : Int?
     //头部
     var albumPic    : String?
     var headerImg   : String?

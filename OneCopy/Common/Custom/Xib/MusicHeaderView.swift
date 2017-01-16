@@ -25,14 +25,16 @@ class MusicHeaderView: UIView {
  
     var delegate : MusicHeaderViewDelegate?
     //音乐播放管理
-    lazy var player:AVPlayer = {
+    var player:AVPlayer?
+    //数据
+    var musicId:Int?{
     
-        let item = AVPlayerItem.init(url: URL.init(string: "http://sc1.111ttt.com/2016/1/12/10/205102159306.mp3")!)
-        let player = AVPlayer.init(playerItem: item)
-        print("play music")
-        return player
-    }()
-    
+        didSet{
+        
+         //网络请求
+        self.getData()
+        }
+    }
     var typeIndex : Int = 0
     
     @IBOutlet weak var cardView: UIView!
@@ -93,20 +95,46 @@ class MusicHeaderView: UIView {
         self.delegate?.musicHeaderViewFuncBtnClick(view: self, index: 2)
     }
     
+    //音乐创建
+    func createMusic(urlStr:String){
+    
+        let item = AVPlayerItem.init(url: URL.init(string: urlStr)!)
+        player = AVPlayer.init(playerItem: item)
+        print("play music")
+    }
+    
     //点击播放音乐按钮
     @IBAction func clickPlayBtn(_ sender: UIButton) {
         
         if !sender.isSelected {
             
             //开始播放
-            player.play()
+            player?.play()
         }else{
         
             //停止播放
-            player.pause()
+            player?.pause()
         }
         
         sender.isSelected = !sender.isSelected
     }
 
+    //网络数据请求
+    func getData(){
+    
+        HttpManager.musciInfoGet(musicId: musicId!, success: {dic in
+        
+            //数据显示
+            DispatchQueue.main.async {
+                
+                self.headerImgView.image = UIImage.init(named: dic["image"] as! String )
+                self.songNameLbl.text = dic["name"] as! String?
+                self.typeLbl.text = dic["type"] as! String?
+                self.timeLbl.text = dic["time"] as! String?
+                self.mainPicView.image = UIImage.init(named: dic["icon"] as! String)
+                //音乐
+                self.createMusic(urlStr: dic["url"] as! String)
+            }
+        })
+    }
 }

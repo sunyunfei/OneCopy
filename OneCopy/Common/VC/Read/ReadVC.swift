@@ -51,15 +51,21 @@ class ReadVC: BaseViewController {
     func getBannerDatas() -> Void {
         
         let datas : NSMutableArray = NSMutableArray.init()
-        let tempDict1 : Dictionary = ["img":"b_1","link":""]
-        let tempDict2 : Dictionary = ["img":"b_2","link":""]
-        let tempDict3 : Dictionary = ["img":"b_3","link":""]
-        let tempDict4 : Dictionary = ["img":"b_4","link":""]
-        datas.add(tempDict1)
-        datas.add(tempDict2)
-        datas.add(tempDict3)
-        datas.add(tempDict4)
-        self.bannerView.datas = datas
+        //网络请求
+        HttpManager.readImageGet { dataArray in
+            
+            //遍历数组
+            for dic:Dictionary<String,AnyObject> in dataArray{
+            
+                print(dic)
+                datas.add(dic)
+            }
+            DispatchQueue.main.async {
+                
+                self.bannerView.datas = datas
+            }
+        }
+        
     }
     
     func getListDatas() -> Void {
@@ -96,6 +102,14 @@ class ReadVC: BaseViewController {
 }
 
 
+//        let tempDict1 : Dictionary = ["img":"b_1","link":""]
+//        let tempDict2 : Dictionary = ["img":"b_2","link":""]
+//        let tempDict3 : Dictionary = ["img":"b_3","link":""]
+//        let tempDict4 : Dictionary = ["img":"b_4","link":""]
+//        datas.add(tempDict1)
+//        datas.add(tempDict2)
+//        datas.add(tempDict3)
+//        datas.add(tempDict4)
 
 
 //        let model_1 : ReadModel = ReadModel.init()

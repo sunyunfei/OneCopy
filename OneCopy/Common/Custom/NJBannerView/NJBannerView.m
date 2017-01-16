@@ -60,7 +60,7 @@
 {
     if (_arrBannerImageViews == nil) {
         _arrBannerImageViews = [NSMutableArray array];
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             CGRect frame = CGRectMake(WIDTH * i, 0, WIDTH,HEIGHT);
             NJBannerImageView *imageV = [[NJBannerImageView alloc] initWithFrame:frame];
             imageV.linkAction = ^(NSString *link)

@@ -119,6 +119,11 @@
 		058C52821E2385FC00E54753 /* MainViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C52811E2385FC00E54753 /* MainViewManager.swift */; };
 		058C52841E238BB400E54753 /* MusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C52831E238BB400E54753 /* MusicManager.swift */; };
 		058C53071E239A7C00E54753 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C53061E239A7C00E54753 /* UserManager.swift */; };
+		05BDC8191E2C8C9600D33211 /* MovieDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BDC8181E2C8C9600D33211 /* MovieDetailsVC.swift */; };
+		05BDC81B1E2C8F6900D33211 /* MovieHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BDC81A1E2C8F6900D33211 /* MovieHeaderView.swift */; };
+		05BDC81D1E2C8F7000D33211 /* MovieHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05BDC81C1E2C8F7000D33211 /* MovieHeaderView.xib */; };
+		05BDC81F1E2C966100D33211 /* MovieDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BDC81E1E2C966100D33211 /* MovieDetailsModel.swift */; };
+		05BDC8211E2CA75200D33211 /* MovieDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BDC8201E2CA75200D33211 /* MovieDetailsCell.swift */; };
 		05C9DC3F1E2B19E6001C3067 /* HttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C9DC3E1E2B19E6001C3067 /* HttpManager.swift */; };
 		05C9DC411E2B2F1B001C3067 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C9DC401E2B2F1B001C3067 /* LoginModel.swift */; };
 		288950756BD0AAC9DFE94367 /* Pods_OneCopy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FB1EE3FB99400383208BD5 /* Pods_OneCopy.framework */; };
@@ -286,6 +291,11 @@
 		058C52811E2385FC00E54753 /* MainViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewManager.swift; sourceTree = "<group>"; };
 		058C52831E238BB400E54753 /* MusicManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicManager.swift; sourceTree = "<group>"; };
 		058C53061E239A7C00E54753 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		05BDC8181E2C8C9600D33211 /* MovieDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsVC.swift; sourceTree = "<group>"; };
+		05BDC81A1E2C8F6900D33211 /* MovieHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieHeaderView.swift; sourceTree = "<group>"; };
+		05BDC81C1E2C8F7000D33211 /* MovieHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieHeaderView.xib; sourceTree = "<group>"; };
+		05BDC81E1E2C966100D33211 /* MovieDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsModel.swift; sourceTree = "<group>"; };
+		05BDC8201E2CA75200D33211 /* MovieDetailsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsCell.swift; sourceTree = "<group>"; };
 		05C9DC3E1E2B19E6001C3067 /* HttpManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpManager.swift; sourceTree = "<group>"; };
 		05C9DC401E2B2F1B001C3067 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		4AA76E244854E8309BF5A677 /* Pods-OneCopy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneCopy.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneCopy/Pods-OneCopy.release.xcconfig"; sourceTree = "<group>"; };
@@ -516,6 +526,7 @@
 				040B05BF1DB0C8C30012028F /* MusicSongToolCell.xib */,
 				040B05C21DB0CB600012028F /* MusicSongCommentCell.swift */,
 				046FA5221DB4AE5D009258D3 /* MusicSongContentCell.swift */,
+				05BDC8201E2CA75200D33211 /* MovieDetailsCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -529,6 +540,7 @@
 				04CCDE781DAF2DD300269211 /* ReadListModel.swift */,
 				04E8CB851DB0745E000CFDC8 /* MusicModel.swift */,
 				05C9DC401E2B2F1B001C3067 /* LoginModel.swift */,
+				05BDC81E1E2C966100D33211 /* MovieDetailsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -562,6 +574,8 @@
 			children = (
 				04E8CB811DB06941000CFDC8 /* MusicHeaderView.swift */,
 				04E8CB831DB0694F000CFDC8 /* MusicHeaderView.xib */,
+				05BDC81A1E2C8F6900D33211 /* MovieHeaderView.swift */,
+				05BDC81C1E2C8F7000D33211 /* MovieHeaderView.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -692,6 +706,7 @@
 			children = (
 				04EC35A81D9D0B7B008BCF65 /* Movie.storyboard */,
 				040CE5511DAF78D200714C2E /* MovieVC.swift */,
+				05BDC8181E2C8C9600D33211 /* MovieDetailsVC.swift */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -841,6 +856,7 @@
 				040CE5581DAF872D00714C2E /* MovieListCell.xib in Resources */,
 				058C52801E23835E00E54753 /* LoginStoryboard.storyboard in Resources */,
 				04EC35A71D9D0B3A008BCF65 /* Music.storyboard in Resources */,
+				05BDC81D1E2C8F7000D33211 /* MovieHeaderView.xib in Resources */,
 				04EC35731D9CFFC7008BCF65 /* LaunchScreen.storyboard in Resources */,
 				04EC35A51D9D0991008BCF65 /* Read.storyboard in Resources */,
 				04E8CB841DB0694F000CFDC8 /* MusicHeaderView.xib in Resources */,
@@ -941,6 +957,7 @@
 				040CE54E1DAF738A00714C2E /* UIViewControllerExtensions.swift in Sources */,
 				04E8CB7E1DB068C3000CFDC8 /* MusicVC.swift in Sources */,
 				04413B761DA891FF00331860 /* BaseModel.swift in Sources */,
+				05BDC81F1E2C966100D33211 /* MovieDetailsModel.swift in Sources */,
 				04C9946C1DAE3965002D5B91 /* ZQImageBrowserCell.m in Sources */,
 				040CE53C1DAF738A00714C2E /* StringExtensions.swift in Sources */,
 				046FA5231DB4AE5D009258D3 /* MusicSongContentCell.swift in Sources */,
@@ -954,6 +971,7 @@
 				04EC35691D9CFFC7008BCF65 /* AppDelegate.swift in Sources */,
 				040CE5401DAF738A00714C2E /* UIButtonExtensions.swift in Sources */,
 				040CE52D1DAF738A00714C2E /* CGRectExtensions.swift in Sources */,
+				05BDC81B1E2C8F6900D33211 /* MovieHeaderView.swift in Sources */,
 				040CE5231DAF738A00714C2E /* ArrayExtensions.swift in Sources */,
 				040CE53D1DAF738A00714C2E /* UIAlertControllerExtensions.swift in Sources */,
 				040B05C01DB0C8C30012028F /* MusicSongToolCell.swift in Sources */,
@@ -976,6 +994,7 @@
 				040CE5311DAF738A00714C2E /* ErrorTypeExtensions.swift in Sources */,
 				040CE52A1DAF738A00714C2E /* BlockWebView.swift in Sources */,
 				040CE5241DAF738A00714C2E /* BlockButton.swift in Sources */,
+				05BDC8211E2CA75200D33211 /* MovieDetailsCell.swift in Sources */,
 				04A0E0C81DAF63D800AE1AD0 /* ReadListCardItem.swift in Sources */,
 				040CE5351DAF738A00714C2E /* NSBundleExtensions.swift in Sources */,
 				05C9DC411E2B2F1B001C3067 /* LoginModel.swift in Sources */,
@@ -1014,6 +1033,7 @@
 				040CE5381DAF738A00714C2E /* NSObjectExtensions.swift in Sources */,
 				04413B691DA882FE00331860 /* BaseViewController.swift in Sources */,
 				040CE54B1DAF738A00714C2E /* UITextFieldExtensions.swift in Sources */,
+				05BDC8191E2C8C9600D33211 /* MovieDetailsVC.swift in Sources */,
 				040CE59B1DAF89D200714C2E /* UIView+MJExtension.m in Sources */,
 				040CE5261DAF738A00714C2E /* BlockPan.swift in Sources */,
 				04CCDE771DAF1F9F00269211 /* NJBannerView.m in Sources */,

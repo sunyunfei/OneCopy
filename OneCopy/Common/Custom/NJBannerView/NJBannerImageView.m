@@ -7,7 +7,7 @@
 //
 
 #import "NJBannerImageView.h"
-//#import "UIImageView+WebCache.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface NJBannerImageView ()
 
@@ -22,6 +22,7 @@
     if (self = [super initWithFrame:frame]) {
         UIImageView *imgV = [[UIImageView alloc] initWithFrame:self.bounds];
         imgV.contentMode = UIViewContentModeScaleToFill;
+        imgV.image = [UIImage imageNamed:@"default"];//默认图片
         imgV.layer.masksToBounds = YES;
         [self addSubview:imgV];
         _imgV = imgV;
@@ -37,8 +38,9 @@
     _dicProperty = dicProperty;
     
     NSString *imgURL = _dicProperty[@"img"];
-    if ([imgURL hasPrefix:@"http"]) {  //网络图片
-//        [_imgV sd_setImageWithURL:[NSURL URLWithString:imgURL] placeholderImage:self.placeholderImg options:SDWebImageRetryFailed];
+    if ([imgURL hasPrefix:@"http"]) {
+        //网络图片
+        [_imgV sd_setImageWithURL:[NSURL URLWithString:imgURL] placeholderImage:self.placeholderImg options:SDWebImageRetryFailed];
     }
     else {
         _imgV.image = [UIImage imageNamed:imgURL];

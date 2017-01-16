@@ -46,7 +46,6 @@ class MainPageVC: BaseViewController {
         //网络请求
         HttpManager.homeGet { dataArray in
             
-            print(dataArray)
             //遍历数组
             for dic:Dictionary<String,AnyObject> in dataArray{
                

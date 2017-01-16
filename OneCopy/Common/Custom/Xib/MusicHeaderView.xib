@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="528"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="z_1" translatesAutoresizingMaskIntoConstraints="NO" id="bnR-bs-Ay6">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="bnR-bs-Ay6">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="375" id="X7Q-ns-y2Y"/>
@@ -24,7 +24,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yyw-mZ-Npx">
                     <rect key="frame" x="20" y="348" width="335" height="128"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="mGU-Tt-chl">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="mGU-Tt-chl">
                             <rect key="frame" x="20" y="24" width="50" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="50" id="Dim-gS-hoz"/>
@@ -199,7 +199,7 @@
                 <outlet property="timeLbl" destination="ChV-O6-sKx" id="bgz-xU-hKK"/>
                 <outlet property="typeLbl" destination="C43-x1-cZK" id="wRd-UF-ARM"/>
             </connections>
-            <point key="canvasLocation" x="-123.5" y="15"/>
+            <point key="canvasLocation" x="-172" y="-68"/>
         </view>
     </objects>
     <resources>
@@ -209,9 +209,8 @@
         <image name="B_2_2" width="21" height="20"/>
         <image name="B_3_1" width="22" height="20"/>
         <image name="B_3_2" width="24" height="19"/>
-        <image name="header" width="971" height="639"/>
+        <image name="default" width="900" height="602"/>
         <image name="play" width="49" height="50"/>
         <image name="xiami" width="84" height="25"/>
-        <image name="z_1" width="150" height="150"/>
     </resources>
 </document>

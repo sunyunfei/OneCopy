@@ -66,7 +66,7 @@ class MainPageCardItem: UIView,UIScrollViewDelegate,UIGestureRecognizerDelegate 
         let url = URL(string : self.model.picUrl as! String)
         picView.contentMode = UIViewContentMode.scaleAspectFill
         picView.layer.masksToBounds = true
-        picView.kf_setImage(with: url)
+        picView.kf.setImage(with: url)
         let picTap : UITapGestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(MainPageCardItem.picClick))
         picView.isUserInteractionEnabled = true
         picView.addGestureRecognizer(picTap)

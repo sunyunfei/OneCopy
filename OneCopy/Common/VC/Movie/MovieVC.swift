@@ -32,6 +32,7 @@ class MovieVC: BaseViewController,UITableViewDelegate,UITableViewDataSource {
         self.tableView = UITableView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height - 64 - 49))
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.separatorStyle = .none
         self.tableView.tableFooterView = UIView.init()
         self.view.addSubview(self.tableView)
         
@@ -44,29 +45,22 @@ class MovieVC: BaseViewController,UITableViewDelegate,UITableViewDataSource {
     
     func getData() -> Void {
         
-        let model_1 : MovieListModel = MovieListModel.init()
-        model_1.image = UIImage.init(named: "M_1")
-        self.datas.append(model_1)
+        //网络请求
+        HttpManager.movieGet { dataArray in
+            
+            //遍历数组
+            for dic:Dictionary<String,AnyObject> in dataArray{
+            
+                let model : MovieListModel = MovieListModel.init(dic: dic)
+                self.datas.append(model)
+            }
+            //刷新表
+            DispatchQueue.main.async {
+                
+                self.tableView.reloadData()
+            }
+        }
         
-        let model_2 : MovieListModel = MovieListModel.init()
-        model_2.image = UIImage.init(named: "M_2")
-        self.datas.append(model_2)
-        
-        let model_3 : MovieListModel = MovieListModel.init()
-        model_3.image = UIImage.init(named: "M_3")
-        self.datas.append(model_3)
-        
-        let model_4 : MovieListModel = MovieListModel.init()
-        model_4.image = UIImage.init(named: "M_4")
-        self.datas.append(model_4)
-        
-        let model_5 : MovieListModel = MovieListModel.init()
-        model_5.image = UIImage.init(named: "M_5")
-        self.datas.append(model_5)
-        
-        let model_6 : MovieListModel = MovieListModel.init()
-        model_6.image = UIImage.init(named: "M_6")
-        self.datas.append(model_6)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -84,7 +78,10 @@ class MovieVC: BaseViewController,UITableViewDelegate,UITableViewDataSource {
             cell = Bundle.main.loadNibNamed("MovieListCell", owner: nil, options: nil)?.first as! MovieListCell?
         }
     
-        cell?.imgView.image = self.datas[indexPath.row].image
+        cell?.imgView.image = UIImage.init(named: "default")
+        //网络图片显示
+        let url = URL(string : self.datas[indexPath.row].image!)
+        cell?.imgView?.kf.setImage(with: url)
         
         return cell!
     }
@@ -94,5 +91,45 @@ class MovieVC: BaseViewController,UITableViewDelegate,UITableViewDataSource {
         return 140
         
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        //取得对应的数据
+        let model : MovieListModel = datas[indexPath.row];
+        //跳转界面
+        let movieDetailsVC = MovieDetailsVC()
+        movieDetailsVC.movieId = model.movieId
+        //让tabbar消失
+        self.hidesBottomBarWhenPushed = true
+        self.pushVC(movieDetailsVC)
+        //让tabbr出现
+        self.hidesBottomBarWhenPushed = false
+    }
     
 }
+
+
+
+/*
+ let model_1 : MovieListModel = MovieListModel.init()
+ model_1.image = UIImage.init(named: "M_1")
+ self.datas.append(model_1)
+ 
+ let model_2 : MovieListModel = MovieListModel.init()
+ model_2.image = UIImage.init(named: "M_2")
+ self.datas.append(model_2)
+ 
+ let model_3 : MovieListModel = MovieListModel.init()
+ model_3.image = UIImage.init(named: "M_3")
+ self.datas.append(model_3)
+ 
+ let model_4 : MovieListModel = MovieListModel.init()
+ model_4.image = UIImage.init(named: "M_4")
+ self.datas.append(model_4)
+ 
+ let model_5 : MovieListModel = MovieListModel.init()
+ model_5.image = UIImage.init(named: "M_5")
+ self.datas.append(model_5)
+ 
+ let model_6 : MovieListModel = MovieListModel.init()
+ model_6.image = UIImage.init(named: "M_6")
+ self.datas.append(model_6)*/
